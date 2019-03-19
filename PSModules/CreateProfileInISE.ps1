@@ -97,3 +97,4 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add(''Force Import Cloud Ready S
 Add-Content -Value $code -Path $profile.AllUsersCurrentHost
 
 psEdit $profile.AllUsersCurrentHost -ErrorAction SilentlyContinue
+#$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()

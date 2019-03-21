@@ -73,6 +73,41 @@ $code =
 }
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add(''Load NAV 2017 CmdLets'',$code,$null)
 
+$code =
+{
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Model.Tools.psd1" -WarningAction SilentlyContinue | out-null
+ Import-Module "$env:ProgramFiles\Microsoft Dynamics NAV\100\Service\NavAdminTool.ps1" -WarningAction SilentlyContinue | Out-Null
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Apps.Tools.psd1" -WarningAction SilentlyContinue | Out-Null
+
+ Clear-Host
+ Write-Host 'get-Command -Module 'Microsoft.Dynamics.Nav.*'' -ForeGroundColor Yellow
+ get-Command -Module 'Microsoft.Dynamics.Nav.*'
+}
+$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('Load NAV 2017 CmdLets',$code,$null)
+
+$code =
+{
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics NAV\110\RoleTailored Client\Microsoft.Dynamics.Nav.Model.Tools.psd1" -WarningAction SilentlyContinue | out-null
+ Import-Module "$env:ProgramFiles\Microsoft Dynamics NAV\110\Service\NavAdminTool.ps1" -WarningAction SilentlyContinue | Out-Null
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics NAV\110\RoleTailored Client\Microsoft.Dynamics.Nav.Apps.Tools.psd1" -WarningAction SilentlyContinue | Out-Null
+
+ Clear-Host
+ Write-Host 'get-Command -Module 'Microsoft.Dynamics.Nav.*'' -ForeGroundColor Yellow
+ get-Command -Module 'Microsoft.Dynamics.Nav.*'
+}
+$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('Load NAV 2018 CmdLets',$code,$null)
+
+$code =
+{
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics 365 Business Central\130\RoleTailored Client\Microsoft.Dynamics.Nav.Model.Tools.psd1" -WarningAction SilentlyContinue | out-null
+ Import-Module "$env:ProgramFiles\Microsoft Dynamics 365 Business Central\130\Service\NavAdminTool.ps1" -WarningAction SilentlyContinue | Out-Null
+ Import-Module "${env:ProgramFiles(x86)}\Microsoft Dynamics 365 Business Central\130\RoleTailored Client\Microsoft.Dynamics.Nav.Apps.Tools.psd1" -WarningAction SilentlyContinue | Out-Null
+
+ Clear-Host
+ Write-Host 'get-Command -Module 'Microsoft.Dynamics.Nav.*'' -ForeGroundColor Yellow
+ get-Command -Module 'Microsoft.Dynamics.Nav.*'
+}
+$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add('Load BC 2018R2 CmdLets',$code,$null)
 
 $code =
 {
